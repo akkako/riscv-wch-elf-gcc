@@ -2,6 +2,8 @@
 
 一个用于安装 WCH 修改版 RISC-V GCC 工具链并将其添加到系统 PATH 的 GitHub Composite Action。
 
+工具链的名称是 `riscv32-wch-elf-gcc`，版本为 `15.2.0`。
+
 ## 功能特性
 
 - **一键安装**：自动克隆工具链仓库、解压归档文件并配置环境。
@@ -14,7 +16,7 @@
 
 ```yaml
 - name: Install WCH modified GCC toolchain
-  uses: ./.github/actions/install-wch-toolchain
+  uses: akkako/riscv-wch-elf-gcc@v1
 ```
 
 ## 示例工作流
@@ -31,7 +33,7 @@ jobs:
       - uses: actions/checkout@v5
 
       - name: Install WCH modified GCC toolchain
-        uses: ./.github/actions/install-wch-toolchain
+        uses: akkako/riscv-wch-elf-gcc@v1
 
       - name: Build Application
         run: |

@@ -6,6 +6,8 @@
 
 A GitHub Composite Action to install the WCH modified RISC-V GCC toolchain and add it to the system PATH.
 
+The name of gcc toolchain is `riscv32-wch-elf-gcc`, the version is `15.2.0`.
+
 ## Features
 
 - **One-step installation**: Automatically clones the toolchain repository, extracts the archive, and configures the environment.
@@ -18,7 +20,7 @@ Add the following step to your workflow:
 
 ```yaml
 - name: Install WCH modified GCC toolchain
-  uses: ./.github/actions/install-wch-toolchain
+  uses: akkako/riscv-wch-elf-gcc@v1
 ```
 
 ## Example Workflow
@@ -35,7 +37,7 @@ jobs:
       - uses: actions/checkout@v5
 
       - name: Install WCH modified GCC toolchain
-        uses: ./.github/actions/install-wch-toolchain
+        uses: akkako/riscv-wch-elf-gcc@v1
 
       - name: Build Application
         run: |
