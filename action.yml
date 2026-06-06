@@ -1,5 +1,8 @@
 name: 'Install WCH modified GCC toolchain'
 description: 'Install WCH modified RISC-V GCC toolchain and add it to PATH'
+branding:
+  icon: 'cpu'
+  color: 'blue'
 
 runs:
   using: 'composite'
